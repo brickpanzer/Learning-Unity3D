@@ -85,7 +85,7 @@ public class FirstPersonMovement : MonoBehaviour
           }
         }
 
-        if(Input.GetAxis("Vertical") != 0 && !Input.GetKey(KeyCode.LeftShift) && IsGrounded()){
+        if((Input.GetAxis("Vertical") != 0 || Input.GetAxis("Horizontal") != 0 ) && !Input.GetKey(KeyCode.LeftShift) && IsGrounded()){
           Debug.Log(walk_timer);
           if(walk_timer >= 0.6f){
             walk_timer = 0f;
