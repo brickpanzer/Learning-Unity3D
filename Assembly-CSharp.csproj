@@ -56,8 +56,12 @@
      <Compile Include="Assets\BasicGun.cs" />
      <Compile Include="Assets\Bullet.cs" />
      <Compile Include="Assets\CameraScript.cs" />
+     <Compile Include="Assets\EffectExamples\Misc Effects\Scripts\SpawnEffect.cs" />
      <Compile Include="Assets\Explode.cs" />
      <Compile Include="Assets\FirstPersonMovement.cs" />
+     <Compile Include="Assets\Greande_Launcher_01.cs" />
+     <Compile Include="Assets\Gun_AM_SAR.cs" />
+     <Compile Include="Assets\PlayerMovement.cs" />
      <None Include="Assets\Hawken Mats\Thruster_09.props.txt" />
      <None Include="Assets\Hawken Mats\Weap_AutoShotgun.props.txt" />
      <None Include="Assets\Hawken Mats\Weap_Repeater_Predator.props.txt" />
@@ -73,10 +77,13 @@
      <None Include="Assets\Hawken Mats\Weap_SMGK.props.txt" />
      <None Include="Assets\Hawken Mats\Boot_Torso.props.txt" />
      <None Include="Assets\Hawken Mats\Weap_AssaultRifle_3P.props.txt" />
+     <None Include="Assets\EffectExamples\Misc Effects\Shaders\Dissolve.shader" />
      <None Include="Assets\Hawken Mats\Weap_RepairTorch.props.txt" />
+     <None Include="Assets\EffectExamples\Misc Effects\Shaders\FireFly.shader" />
      <None Include="Assets\Hawken Mats\Weap_GrenadeLauncher.props.txt" />
      <None Include="Assets\Hawken Mats\Boot_UpperLeg.props.txt" />
      <None Include="Assets\Hawken Mats\Weap_AssaultRifle_AmmoFeeder.props.txt" />
+     <None Include="Assets\EffectExamples\Misc Effects\Prefabs\Readme_Dissolve_Respawn_.txt" />
      <None Include="Assets\Hawken Mats\MAT_WeaponDefault.props.txt" />
      <None Include="Assets\Hawken Mats\Thruster_10.props.txt" />
      <None Include="Assets\Hawken Mats\PRP_Nailgun_P1.props.txt" />
@@ -84,6 +91,7 @@
      <None Include="Assets\Hawken Mats\Boot_LowerLeg.props.txt" />
      <None Include="Assets\Hawken Mats\ThrusterHousing.props.txt" />
      <None Include="Assets\Hawken Mats\Thruster_11.props.txt" />
+     <None Include="Assets\EffectExamples\Misc Effects\Shaders\Respawn.shader" />
      <None Include="Assets\Hawken Mats\Weap_SMC_Mod.props.txt" />
      <None Include="Assets\Hawken Mats\PRP_Cannon.props.txt" />
      <None Include="Assets\Hawken Mats\Weap_HomingMissile.props.txt" />

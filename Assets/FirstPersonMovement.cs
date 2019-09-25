@@ -40,8 +40,8 @@ public class FirstPersonMovement : MonoBehaviour
     void Start()
     {
         basic_audio_source = GetComponent<AudioSource>();
-        fuel_text = GameObject.Find("Fuel").GetComponent<Text>();
-        capsule = GameObject.Find("Body").GetComponent<Rigidbody>();
+        fuel_text = GameObject.Find("PlayerFuel").GetComponent<Text>();
+        capsule = GameObject.Find("PlayerBody").GetComponent<Rigidbody>();
         distToGround = GetComponent<Collider>().bounds.extents.y;
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
@@ -86,7 +86,6 @@ public class FirstPersonMovement : MonoBehaviour
         }
 
         if((Input.GetAxis("Vertical") != 0 || Input.GetAxis("Horizontal") != 0 ) && !Input.GetKey(KeyCode.LeftShift) && IsGrounded()){
-          Debug.Log(walk_timer);
           if(walk_timer >= 0.6f){
             walk_timer = 0f;
             basic_audio_source.PlayOneShot(walking_sfx[rand.Next(0,4)],1f);

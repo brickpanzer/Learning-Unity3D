@@ -23,12 +23,14 @@ public class Explode : MonoBehaviour
         countdown -= Time.fixedDeltaTime;
         if(countdown <= 0f && !exploded){
             exploded = true;
-            AudioSource.PlayClipAtPoint(explosion_sfx, transform.position);
+            AudioSource.PlayClipAtPoint(explosion_sfx, transform.position, 32f);
+            Instantiate(explosion_vfx, transform.position, transform.rotation);
             Destroy(gameObject);
         }
         if(Input.GetMouseButtonDown(1) && !exploded){
           exploded = true;
           AudioSource.PlayClipAtPoint(explosion_sfx, transform.position, 32f);
+          Instantiate(explosion_vfx, transform.position, transform.rotation);
           Destroy(gameObject);
         }
     }

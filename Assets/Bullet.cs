@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
+    public GameObject hit_vfx;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,7 +18,7 @@ public class Bullet : MonoBehaviour
     }
 
     void OnCollisionEnter(Collision collision){
-        Debug.Log("COLLIDE");
+        //Instantiate(hit_vfx, transform.position, transform.rotation);
         Destroy(gameObject);
     }
 }
