@@ -42,7 +42,7 @@ public class Gun_AM_SAR : MonoBehaviour
           audioSource.PlayOneShot(Fire_SFX[rand.Next(0,3)],0.5f);
         }
         if(interval_timer <= fire_rate){
-          interval_timer += Time.fixedDeltaTime;
+          interval_timer += Time.deltaTime;
         }
     }
 }

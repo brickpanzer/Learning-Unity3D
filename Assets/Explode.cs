@@ -20,7 +20,7 @@ public class Explode : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        countdown -= Time.fixedDeltaTime;
+        countdown -= Time.deltaTime;
         if(countdown <= 0f && !exploded){
             exploded = true;
             AudioSource.PlayClipAtPoint(explosion_sfx, transform.position, 32f);

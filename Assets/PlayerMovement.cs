@@ -42,7 +42,7 @@ public class PlayerMovement : MonoBehaviour
 		public float boost_multiplier = 3f;
 		float move_speed = 0f;
 
-    public float jump_force = 100f;
+    public float jump_force = 0f;
 
     float to_ground = 0f;
     float z_movement;
@@ -82,6 +82,11 @@ public class PlayerMovement : MonoBehaviour
 
 				landing_sfx[0] = landing_1;
 				landing_sfx[1] = landing_2;
+
+				Physics.gravity = new Vector3(0, -30.0F, 0);
+
+				// QualitySettings.vSyncCount = 0;
+				// Application.targetFrameRate = 30;
     }
 
     bool IsGrounded(){
@@ -113,22 +118,23 @@ public class PlayerMovement : MonoBehaviour
     }
 
 		void Jump(){
+				jump_force = 20f;
 				engines_sfx_src.PlayOneShot(engineOn_sfx,1f);
-				PlayerBody.AddForce(transform.up * jump_force, ForceMode.Impulse);
+				PlayerBody.AddForce(Vector3.up * jump_force, ForceMode.VelocityChange);
 				fuel -= 15f;
 				refuel_wait = 0f;
 		}
 
 		void Hover(){
-			PlayerBody.AddForce(transform.up * 150f);
+			PlayerBody.AddForce(Vector3.up * 10f, ForceMode.Acceleration);
 			fuel -= 30f * Time.deltaTime;
 			refuel_wait = 0f;
 
 		}
 
 		void Strafe(){
-			float direction = x_movement < 0 ? -100f : 100f;
-			PlayerBody.AddForce(transform.right * direction, ForceMode.Impulse);
+			float direction = x_movement < 0 ? -20f : 20f;
+			PlayerBody.AddForce(Vector3.right * direction, ForceMode.VelocityChange);
 			fuel -= 35f;
 			refuel_wait = 0f;
 			if(is_grounded){
@@ -156,9 +162,9 @@ public class PlayerMovement : MonoBehaviour
 						move_speed = base_speed; // Reset players pace
 
 						// After x time on the ground, player starts to refuel
-						refuel_wait += Time.fixedDeltaTime;
+						refuel_wait += Time.deltaTime;
 	          if(refuel_wait > 0.5f && fuel <= 150f){
-	            fuel += 30f * Time.fixedDeltaTime;
+	            fuel += 30f * Time.deltaTime;
 	          }
 
 						// Play walk cycle sound on a clock
@@ -167,7 +173,7 @@ public class PlayerMovement : MonoBehaviour
 	            legs_sfx_src.PlayOneShot(walking_sfx[rand.Next(0,4)],1f);
 	          }
 	          else if(is_moving){
-	            walk_timer += Time.fixedDeltaTime;
+	            walk_timer += Time.deltaTime;
 	          }
 				}
 
@@ -215,7 +221,10 @@ public class PlayerMovement : MonoBehaviour
 					engines_sfx_src.PlayOneShot(engineOff_sfx,1f);
 				}
 
-				PlayerBody.AddForce(Physics.gravity * 2f, ForceMode.Acceleration);
+				// if(!is_grounded){
+				// 	Gravity();
+				// }
+
     }
 
 		void OnCollisionEnter(Collision collision){

@@ -40,7 +40,7 @@ public class Greande_Launcher_01 : MonoBehaviour
             reload_timer = 0f;
         }
         if(reload_timer <= 5f){
-          reload_timer += Time.fixedDeltaTime;
+          reload_timer += Time.deltaTime;
         }
 
     }
