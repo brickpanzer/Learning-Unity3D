@@ -129,7 +129,7 @@ public class PlayerMovement : MonoBehaviour
 
 		void Strafe(){
 			float direction = x_movement < 0 ? -20f : 20f;
-			PlayerBody.AddForce(Vector3.right * direction, ForceMode.VelocityChange);
+			PlayerBody.AddForce(transform.right * direction, ForceMode.VelocityChange);
 			fuel -= 35f;
 			refuel_wait = 0f;
 			if(is_grounded){

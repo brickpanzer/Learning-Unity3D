@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8298706700023858758}
   - component: {fileID: 8298706700023858753}
   - component: {fileID: 8298706700023858752}
-  - component: {fileID: 8298706700023858755}
+  - component: {fileID: 5614229137180428770}
   m_Layer: 0
   m_Name: Gun_semiauto
   m_TagString: Untagged
@@ -98,7 +98,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &8298706700023858755
+--- !u!114 &5614229137180428770
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -107,17 +107,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 8298706700023858765}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b6b28c8fd73c6844862c617cbd36eeb, type: 3}
+  m_Script: {fileID: 11500000, guid: 70ce0ff745d5a7d4dbca6ea82cab99f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   audioSource: {fileID: 0}
-  Fire_1: {fileID: 8300000, guid: 78fce5678bf7a3f41a7f95327d30b4b5, type: 3}
-  Fire_2: {fileID: 8300000, guid: 5416d26e221167746830e4cb74539b31, type: 3}
-  Fire_3: {fileID: 8300000, guid: 351b80c300904a748806ce665da0df61, type: 3}
+  Fire_1: {fileID: 0}
+  Fire_2: {fileID: 0}
+  Fire_3: {fileID: 0}
   fire_rate: 0.3
   overheat: 0
-  Bullet_prefab: {fileID: 8762617588113762456, guid: cf53d740ce0fe214ab7c77dae8136f58,
-    type: 3}
+  Bullet_prefab: {fileID: 0}
 --- !u!1 &8298706700166273132
 GameObject:
   m_ObjectHideFlags: 0

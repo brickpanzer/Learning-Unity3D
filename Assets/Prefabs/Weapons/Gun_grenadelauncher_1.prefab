@@ -105,7 +105,7 @@ GameObject:
   - component: {fileID: 2066328205452425623}
   - component: {fileID: 2066328205452425622}
   - component: {fileID: 2066328205452425621}
-  - component: {fileID: 2066328205452425620}
+  - component: {fileID: 3980011789009439060}
   m_Layer: 0
   m_Name: Grenade Spawner
   m_TagString: Untagged
@@ -185,7 +185,7 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &2066328205452425620
+--- !u!114 &3980011789009439060
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -194,13 +194,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 2066328205452425618}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d87c23ea8adff9a4496b7ca73cb54101, type: 3}
+  m_Script: {fileID: 11500000, guid: 956b49f9cdb068149ad21e4a9d40158a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   audioSource: {fileID: 0}
-  Grenade_Launch_1: {fileID: 8300000, guid: b2cc9c417b1df0d4081589e0d512d4bf, type: 3}
-  Grenade_Launch_2: {fileID: 8300000, guid: 1ecb1e7bef6c81b4e821a983397397b1, type: 3}
-  Grenade_Launch_3: {fileID: 8300000, guid: b8d8295dcb0352a4ab19a7f86e7db2a9, type: 3}
+  Grenade_Launch_1: {fileID: 0}
+  Grenade_Launch_2: {fileID: 0}
+  Grenade_Launch_3: {fileID: 0}
   reload_timer: 5
-  Grenade_Prefab: {fileID: 5270710666232147189, guid: 4c849928e0966b2439ff18e4f9890c45,
-    type: 3}
+  Grenade_Prefab: {fileID: 0}

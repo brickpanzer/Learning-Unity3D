@@ -57,9 +57,8 @@
      <Compile Include="Assets\Scripts\Bullet.cs" />
      <Compile Include="Assets\Scripts\CameraScript.cs" />
      <Compile Include="Assets\Scripts\Explode.cs" />
-     <Compile Include="Assets\Scripts\FirstPersonMovement.cs" />
-     <Compile Include="Assets\Scripts\Gun_grenadelauncher_1.cs" />
-     <Compile Include="Assets\Scripts\Gun_semiauto.cs" />
+     <Compile Include="Assets\Scripts\gun_grenadelauncher_2.cs" />
+     <Compile Include="Assets\Scripts\gun_semiauto1.cs" />
      <Compile Include="Assets\Scripts\Legacy\BasicGun.cs" />
      <Compile Include="Assets\Scripts\Legacy\FirstPersonMovement.cs" />
      <Compile Include="Assets\Scripts\PlayerMovement.cs" />
